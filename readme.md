@@ -2,26 +2,32 @@
 
 ### Development
 
-- Install [nvm](https://github.com/nvm-sh/nvm)
-- Find node.js version available
+**Install [nvm](https://github.com/nvm-sh/nvm)**
+
+**Find node.js version available**
 ```bash
 nvm ls-remote
 ```
-- Install and use latest LTS release
+
+**Install and use latest LTS release**
 ```bash
 nvm install v12.16.0
 nvm use v12.16.0
 ```
-- Verify version
+
+**Verify version**
 ```bash
 node --version
 ```
-- Install dependencies
+
+**Install dependencies**
 ```bash
 npm install
 ```
-- Run dev script
-It auto-compiles src/**/*.ts files into .js files located inside build/ dir
+
+**Run dev script**
+
+It auto-compiles __src/**/*.ts__ files into __build/**/*.js__ files
 ```bash
 npm run dev
 ```
@@ -48,19 +54,11 @@ npm run build
 
 Check options
 ```bash
-crawler -h
-
-Options:
-  -V, --version                    output the version number
-  -w, --website <website>          Add website URL to crawl
-  -c, --concurrency <concurrency>  Define concurrency level
-  -l, --limit <limit>              Define max items for url tree
-  -f, --file <file>                Define file path to write website tree
-  -h, --help                       output usage information
+node build/main.js -h
 ```
 
-Example:
+#### Example
 ```bash
-node build/main.js -w https://www.elpais.com/ -c 2 -l 500
+node build/main.js -w https://www.elpais.com/ -c 2 -l 50
 ```
 

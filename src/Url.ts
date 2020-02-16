@@ -9,6 +9,8 @@ export default class URL extends URLParse{
         // If url starts with slash, it has no parent
         if (this.startsWith('/')) {
             this.parent = null
+        } else {
+            this.parent = parent
         }
     }
 

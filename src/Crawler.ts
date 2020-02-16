@@ -7,7 +7,6 @@ const PromisePool = require('es6-promise-pool')
 const fs = require('fs');
 
 import URL from './Url'
-import { url } from 'inspector';
 
 
 interface Dictionary<T> {
@@ -35,6 +34,9 @@ export default class Crawler {
         private file: string = null
     ){
         this.baseUrl = new URL(this.sanitizeWebsite(website))
+        this.concurrency = concurrency
+        this.limit = limit
+        this.file = file
         this.websiteTree = {}
         this.isLimitAlreadyWarned = false
     }
@@ -52,7 +54,7 @@ export default class Crawler {
                 .then(function (response) {
                     return resolve(response)
                 })
-                .catch(function (error) {
+                .catch(function () {
                     return reject(new FetchError(`Error fetching url: ${url}`))
                 })
         })
