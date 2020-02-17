@@ -1,18 +1,22 @@
 {
     "name": "@rmajasol/crawler",
     "version": "1.0.0",
-    "description": "",
+    "description": "Simple website crawler",
     "main": "build/main.js",
     "scripts": {
-        "build": "tsc && nnpm link",
+        "build": "tsc && npm link && npm run lint && npm run test",
         "dev": "tsc --watch",
-        "test": "tsc && mocha build/**/*.spec.js",
+        "test": "tsc && mocha build/**/*.spec.js --timeout 20000",
         "lint": "npx eslint src/**/*.ts",
         "tsc": "tsc"
     },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:rmajasol/crawler.git"
+    },
     "keywords": [],
     "author": "",
-    "license": "",
+    "license": "ISC",
     "dependencies": {
         "@types/cheerio": "^0.22.16",
         "@types/node": "^13.7.1",

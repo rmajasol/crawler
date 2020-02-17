@@ -59,6 +59,24 @@ node build/main.js -h
 
 #### Example
 ```bash
-node build/main.js -w https://www.elpais.com/ -c 2 -l 50
+node build/main.js -w https://www.crawler-test.com/ -c 2 -l 50
 ```
+
+### Usage inside docker container
+Build docker image
+```bash
+docker build -t <your-username>/crawler .
+```
+
+Run container with that image and open a shell to make commands inside
+```bash
+docker run -it <your-username>/crawler /bin/sh
+node build/main.js -w https://www.crawler-test.com/ -c 2 -l 50
+```
+
+You can run also directly:
+```bash
+docker run <your-username>/crawler node build/main.js -w https://www.crawler-test.com/ -c 2 -l 50
+```
+
 
