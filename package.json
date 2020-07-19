@@ -26,7 +26,7 @@
         "commander": "^4.1.1",
         "es6-promise-pool": "^2.5.0",
         "flat": "^5.0.0",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.19",
         "treeify": "^1.1.0",
         "typescript": "^3.7.5",
         "url-parse": "^1.4.7"
