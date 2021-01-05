@@ -21,7 +21,7 @@
         "@types/cheerio": "^0.22.16",
         "@types/node": "^13.7.1",
         "@types/url-parse": "^1.4.3",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "cheerio": "^1.0.0-rc.3",
         "commander": "^4.1.1",
         "es6-promise-pool": "^2.5.0",
